@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>myself</title>
+
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+            font-family: microsoftyahei;
+            font-weight: bolder;
+            background-image: url(http://m.qpic.cn/psc?/V52mgwgg0WS2FL1dZA7w2jBpOY1mTdP3/ruAMsa53pVQWN7FLK88i5v20wY6Ih.mzPgFHj.SOQv5d388ON.APqNtrH13d8s02r*hh*Bof6vnlCaaUHRrETzJpk9je*dX27XO70zWQGAc!/b&bo=eAMyB3gDMgcBByA!&rf=viewer_4);
+            text-align: center;
+            background-size: cover;
+        }
+
+        .box {
+            position: absolute;
+            top: 30%;
+            left: 25%;
+            transform: translate(-20%, -50%);
+            width: 300px;
+            padding: 20px;
+            background: rgba(10, 9, 4, 0.5);
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+        }
+
+        .box h2 {
+            margin: 0 0 10px;
+            padding: 0;
+            color: rgb(9, 6, 4,0.5);
+            text-align: center;
+        }
+
+        .box .inputbox {
+            position: relative;
+        }
+
+        .box .inputbox input {
+            width: 80%;
+            padding: 10px 0;
+            font-size: 15px;
+            color: black;
+            margin-bottom: 5px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: transparent;
+        }
+
+        .box .input label {
+            position: relative;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            font-size: 16px;
+            font-style: normal;
+            color: blanchedalmond;
+            pointer-events: none;
+            /* transform: 1s; */
+            text-align: center;
+        }
+
+        .box .inputbox button {
+            border: solid 4px transparent;
+            border-image: linear-gradient(to right, rgb(51, 197, 202), transparent);
+            border-image-slice: 1;
+            font-family: kaiti;
+        }
+
+        .box .inputbox button:hover {
+            color: white;
+            background-image: linear-gradient(to right, orangered, transparent);
+            border-right: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form class="box">
+
+        <h2>welcome to my world!</h2>
+
+        <div class="inputbox">
+            <label for="user">账户:</label>
+            <input type="text" id="username" placeholder="请输入账号" value="">
+        </div>
+        <div class="inputbox">
+            <label for="pwd">密码:</label>
+            <input type="password" id="pwd" placeholder="请输入密码" value="">
+        </div>
+        <div class="inputbox1">
+            <input type="checkbox" id="chk">
+            <span id="spa">I will remember you!</span>
+        </div>
+        <div class="inputbox">
+            <button id="denglu"><a id="tiaozhuan " href=""></a>登录</button>
+            <button id="quxiao">取消</button>
+        </div>
+
+    </form>
+
+
+    <script>
+        var chk = document.getElementById("chk");
+        var spa = document.getElementById("spa");
+        var btn1 = document.getElementById("denglu");
+        var btn2 = document.getElementById("quxiao");
+        var username = document.getElementById("username");
+        var pwd = document.getElementById("pwd");
+        var a = document.getElementById("tiaozhuan");
+        chk.onmouseout = function () {
+            spa.style.display = "none";
+        }
+        chk.onmouseover = function () {
+            spa.style.display = "block";
+        }
+        btn1.onclick = function () {
+            if (username.value == "" && pwd.value == "") {
+                alert("你在逗我玩吗");
+            } else {
+                if (username.value == "公瑾" && pwd.value == "1018") {
+                    a.href = "https://www.douyin.com/";
+                    //转跳的HTML页面需要与当前HTML页面在一个文件夹中   各种图片也是
+                } else {
+                    if (username.value == "user1" && pwd.value == "321") {
+                        a.href = "";
+                        alert("登录成功");
+                    } else {
+                        if (username.value == "user2" && pwd.value == "321") {
+                            a.href = "";
+                            alert("登录成功");
+                        } else {
+                            alert("你无权登录，请联系@公瑾");
+                        }
+                    }
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
